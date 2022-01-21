@@ -1,5 +1,5 @@
 ####------------------------------------------------------------------------------------------------------
-# this is used for reproducibility of fig4 and corresponding supplementary figs and tables
+# this is used for reproducibility of fig5 and corresponding supplementary figs and tables
 # scavenge analysis of Acute lymphoblastic leukemia trait using a hematopoiesis scATAC dataset
 ####------------------------------------------------------------------------------------------------------
 library(SCAVENGE)
@@ -16,7 +16,6 @@ library(diffloop)
 library(igraph)
 library(stringr)
 setwd("/Users/fyu/Documents/GitHub/SCAVENGE-reproducibility/data")
-
 
 
 
@@ -60,4 +59,4 @@ TRS <- np_score %>% capOutlierQuantile(., 0.99) %>% max_min_scale
 TRS <- TRS * scale_factor
 zscoreWeighted3 <- data.frame(zscoreWeighted2[!omit_idx, ], TRS)
 
-write.csv(zscoreWeighted3, "covid19b1_table.csv", row.names=F)
+write.csv(zscoreWeighted3, "ALL_table.csv", row.names=F)
