@@ -157,10 +157,6 @@ oddsratio(health_state_tab, method = "wald")$measure[-1,]
 sample_state_tab <- table(baso_df2_mono14[, c("Sample_state", "true_cellplot")])
 oddsratio(sample_state_tab[c(2, 1),], method = "wald")$measure[-1,]
 
-
-
-
-
 baso_df2_mono14$true_cellplot = "Depleted cells"
 baso_df2_mono14$true_cellplot[baso_df2_mono14$true_cell_top_idx] = "Enriched cells"
 baso_df2_mono14$true_cellplot <- factor(baso_df2_mono14$true_cellplot, levels=c("Enriched cells", "Depleted cells"))
@@ -237,31 +233,6 @@ eithertop10$tf_name <- rownames(eithertop10)
 
 eithertop50 <- rbind.data.frame(head(res_t.test_df, 50), tail(res_t.test_df, 50))
 save(res_t.test_df, baso_df2_mono14, file="diff_compare_mono14.rda")
-[1] "EOMES_274"       "TBR1_276"        "TBX2_151"        "TBX21_153"
-  [5] "TBX5_281"        "RUNX3_144"       "TBX4_280"        "RUNX2_273"
-  [9] "TCF7L2_58"       "TBX20_152"       "TBX1_279"        "LEF1_237"
- [13] "TCF3_306"        "TCF4_307"        "ZEB1_412"        "MGA_275"
- [17] "TBX15_277"       "FOXI1_100"       "FOXL1_101"       "FOXD2_323"
- [21] "FOXO4_324"       "FOXO6_325"       "FOXP3_326"       "FOXK2_375"
- [25] "FOXK1_374"       "FOXP1_376"       "SPDEF_146"       "CTCFL_373"
- [29] "ID4_300"         "SNAI2_209"       "ERG_227"         "GATA6_378"
- [33] "FOXO3_102"       "ETS1_228"        "SCRT1_207"       "FLI1_99"
- [37] "ERF_226"         "FOXD1_3"         "FOXG1_79"        "FOXP2_72"
- [41] "FIGLA_296"       "ETV2_230"        "SRY_17"          "GATA5_235"
- [45] "CTCF_24"         "FOXF2_2"         "ELK4_62"         "TCF7L1_452"
- [49] "ZBTB7C_159"      "ZBTB7A_411"      "FOS..JUND_434"   "HIC2_204"
- [53] "FOSL1_40"        "RXRB_327"        "ESR1_189"        "PLAG1_32"
- [57] "RARA..RXRA_30"   "TEAD4_283"       "TEAD1_154"       "NR2C2_52"
- [61] "RARA..RXRG_442"  "NR1H4_393"       "MEF2C_49"        "TEF_318"
- [65] "TEAD2_407"       "MEF2A_241"       "TEAD3_282"       "BACH2_371"
- [69] "NFIC..TLX1_22"   "ESRRB_190"       "PPARA..RXRA_441" "NR2F2_394"
- [73] "MEF2D_242"       "RARA.var.2_195"  "ESR2_63"         "NR4A2_31"
- [77] "JUN_44"          "MAF..NFE2_50"    "MEF2B_122"       "HNF4G_43"
- [81] "RARA_194"        "MAFG_121"        "MAFK_384"        "MAFF_383"
- [85] "NRL_317"         "HLF_108"         "ELF5_94"         "MZF1_5"
- [89] "NR2F1_191"       "ZNF263_60"       "EWSR1.FLI1_25"   "ATF4_308"
- [93] "CEBPE_313"       "CEBPB_311"       "CEBPD_312"       "CEBPG_314"
- [97] "CEBPA_61"        "SPIB_16"         "SPI1_147"        "SPIC_148"
 
 manual_selected_top <- rbind.data.frame(
                                 rbind.data.frame(head(res_t.test_df, 50), tail(res_t.test_df, 50))[c(1, 4, 6, 9, 12, 14, 15, 50,    51, 53, 77, 78, 86, 94, 95, 98, 99), ], 
