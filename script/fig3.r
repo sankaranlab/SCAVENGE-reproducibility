@@ -1,6 +1,3 @@
-
-
-
 ####------------------------------------------------------------------------------------------------------
 # this is used for reproducibility of fig3 and corresponding supplementary figs and tables
 # scavenge analysis of 22 blood cell traits using two independent hematopoiesis scATAC datasets
@@ -76,7 +73,7 @@ cell_types <- c("Platelet",
 cell_relevance_anno <- cell_types[c(3, 3, 2, 2, 2, 2, 4, 2, 2, 2, 3, 1, 2, 2, 3, 1, 1, 1, 2, 2, 2, 3)]
 # cbind(colnames(blood22_trs_median_mat), cell_relevance_anno)
 
-pdf(file="/Users/fyu/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Vijay/project/0817-singleVar/data/blood22_Granja_2019_heme/heatmap22bloodtraits.pdf", width=10.8, height=6)
+pdf(file="heatmap22bloodtraits.pdf", width=10.8, height=6)
 ha = HeatmapAnnotation("anno" = cell_relevance_anno,
                        which="row",
                        col = list("anno" = c("Platelet" = "#4b994a", 
@@ -127,8 +124,6 @@ write.csv(blood22_trs_table, "blood22_trs_table2.csv", row.names=F)
 library("stringr")
 library("circlize")
 library(ComplexHeatmap)
-
-
 cell_types <- c("Platelet", 
                 "Red cell",                
                 "Myeloid/Compound white cell",               
@@ -136,7 +131,7 @@ cell_types <- c("Platelet",
                 )
 cell_relevance_anno <- cell_types[c(3, 3, 2, 2, 2, 2, 4, 2, 2, 2, 3, 1, 2, 2, 3, 1, 1, 1, 2, 2, 2, 3)]
 # cbind(colnames(blood22_trs_median_mat), cell_relevance_anno)
-pdf(file="/Users/fyu/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Vijay/project/0817-singleVar/data/blood22_Satpathy_2019_heme/heatmap22bloodtraits.pdf", width=10.8, height=6)
+pdf(file="heatmap22bloodtraits.pdf", width=10.8, height=6)
 ha = HeatmapAnnotation("anno" = cell_relevance_anno,
                        which="row",
                        col = list("anno" = c("Platelet" = "#4b994a", 
